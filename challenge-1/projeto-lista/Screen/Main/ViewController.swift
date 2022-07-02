@@ -33,6 +33,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return viewModel?.rowsNumber ?? 0
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let names = viewModel?.names else { return }
+        viewModel?.didTapListCell(name: "\(names[indexPath.row])")
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell {
             cell.label.text = viewModel?.names[indexPath.row]
