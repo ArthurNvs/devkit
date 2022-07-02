@@ -1,10 +1,3 @@
-//
-//  TableViewCell.swift
-//  projeto-lista
-//
-//  Created by Arthur Monteiro on 02/07/22.
-//
-
 import UIKit
 
 class TableViewCell: UITableViewCell {
