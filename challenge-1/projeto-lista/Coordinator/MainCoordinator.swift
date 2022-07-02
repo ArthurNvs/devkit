@@ -12,6 +12,10 @@ class MainCoordinator: Coordinator {
         navCon.pushViewController(ViewController(viewModel: ViewModel(coordinator: self)), animated: true)
     }
     
+    func goToScreen() {
+        navCon.pushViewController(IMCViewController(), animated: true)
+    }
+    
     func openAlert(title: String) {
         let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
