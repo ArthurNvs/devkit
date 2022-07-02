@@ -8,13 +8,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        tableView.delegate = self
-        tableView.dataSource = self
+        view.backgroundColor = .black
+        tableViewConfig()
     }
     
     public func tableViewConfig() {
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 }
 
