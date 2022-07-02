@@ -9,7 +9,7 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        navCon.pushViewController(ViewController.makeViewController(coordinator: self), animated: true)
+        navCon.pushViewController(ViewController(), animated: true)
     }
     
     func openAlert(title: String) {
