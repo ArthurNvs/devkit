@@ -16,26 +16,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3H-Hx-CVs">
-                        <rect key="frame" x="20" y="20" width="280" height="36"/>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3H-Hx-CVs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desafio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oR-y2-x5o">
-                                <rect key="frame" x="-13" y="-18" width="305" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Desafio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oR-y2-x5o">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="76"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8oR-y2-x5o" firstAttribute="centerX" secondItem="O3H-Hx-CVs" secondAttribute="centerX" id="Sbn-tg-sAi"/>
+                            <constraint firstItem="8oR-y2-x5o" firstAttribute="centerY" secondItem="O3H-Hx-CVs" secondAttribute="centerY" id="nzF-cc-96L"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="O3H-Hx-CVs" secondAttribute="trailing" constant="20" symbolic="YES" id="bCY-bM-rqi"/>
-                    <constraint firstItem="O3H-Hx-CVs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="tg0-W4-sYr"/>
-                    <constraint firstItem="O3H-Hx-CVs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="x5Q-NH-Py3"/>
-                    <constraint firstAttribute="bottom" secondItem="O3H-Hx-CVs" secondAttribute="bottom" constant="20" symbolic="YES" id="xHf-sZ-H6S"/>
+                    <constraint firstItem="O3H-Hx-CVs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dSY-95-qxQ"/>
+                    <constraint firstItem="O3H-Hx-CVs" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="uEk-w2-u5O"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
