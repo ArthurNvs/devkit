@@ -32,9 +32,11 @@ class CalcViewController: UIViewController {
     }
     
     func setStatusLabel() -> String {
-        if calcIMC() >= 26 { return "🙁" }
-        if calcIMC() < 26 && calcIMC() >= 20 { return "😁" }
-        return "🧐"
+        if calcIMC() >= 18.5 && calcIMC() < 25 { return "Normal 😁" }
+        if calcIMC() >= 25 && calcIMC() < 30 { return "Sobrepeso 🙁" }
+        if calcIMC() >= 30 && calcIMC() < 35 { return "Obesidade classe I ☹️" }
+        if calcIMC() >= 35 { return "Obesidade classe II ☹️" }
+        return "Desnutrição 😵"
     }
 
     @IBAction func didTapCalcButton(_ sender: Any) {
