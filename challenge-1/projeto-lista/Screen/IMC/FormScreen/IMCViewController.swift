@@ -19,6 +19,8 @@ class IMCViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        heightField.keyboardType = .numberPad
+        weightField.keyboardType = .numberPad
         view.backgroundColor = .black
     }
     

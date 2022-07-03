@@ -9,7 +9,10 @@ public class CalcViewModel {
     }
     
     func didTapButton(close: Bool) {
-        if (close) { coordinator.goToScreen(screen: .Home) }
+        if (close) {
+            coordinator.goToScreen(screen: .Home)
+            return
+        }
         coordinator.goToScreen(screen: .IMC)
     }
     
