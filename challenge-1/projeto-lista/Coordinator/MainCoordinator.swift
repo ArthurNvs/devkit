@@ -15,11 +15,11 @@ class MainCoordinator: Coordinator {
     func goToScreen(screen: Screen) {
         switch screen {
         case .Home:
-            navCon.pushViewController(ViewController(viewModel: ViewModel(coordinator: self)), animated: true)
+            navCon.pushViewController(ViewController(viewModel: ViewModel(coordinator: self)), animated: false)
         case .IMC:
             navCon.pushViewController(IMCViewController(viewModel: IMCViewModel(coordinator: self)), animated: true)
         case .IMCCalc(let data):
-            navCon.pushViewController(CalcViewController(data: data), animated: true)
+            navCon.pushViewController(CalcViewController(data: data, viewModel: CalcViewModel(coordinator: self)), animated: true)
         }
         
     }

@@ -4,6 +4,10 @@ class IMCViewController: UIViewController {
     
     var viewModel: IMCViewModel?
     
+    @IBOutlet weak var calcButton: UIButton!
+    @IBOutlet weak var heightField: UITextField!
+    @IBOutlet weak var weightField: UITextField!
+    
     init (viewModel: IMCViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
@@ -13,10 +17,6 @@ class IMCViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @IBOutlet weak var calcButton: UIButton!
-    @IBOutlet weak var heightField: UITextField!
-    @IBOutlet weak var weightField: UITextField!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
