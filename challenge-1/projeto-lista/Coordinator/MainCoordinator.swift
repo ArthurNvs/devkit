@@ -12,7 +12,7 @@ class MainCoordinator: Coordinator {
         navCon.pushViewController(ViewController(viewModel: ViewModel(coordinator: self)), animated: true)
     }
     
-    func goToScreen() {
+    func goToScreen(screen: Screen) {
         navCon.pushViewController(IMCViewController(), animated: true)
     }
     

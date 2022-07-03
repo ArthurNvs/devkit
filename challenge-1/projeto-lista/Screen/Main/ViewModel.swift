@@ -14,7 +14,7 @@ public class ViewModel: ScreenProtocol {
     }
     
     public func didTapListCell(name: String) {
-        coordinator.goToScreen()
+        coordinator.goToScreen(screen: .IMC)
     }
     
 }
