@@ -4,6 +4,7 @@ import UIKit
 enum Screen {
     case Home
     case IMC
+    case IMCCalc(IMCModel)
 }
 
 protocol Coordinator {

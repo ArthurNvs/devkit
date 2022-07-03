@@ -9,11 +9,19 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        navCon.pushViewController(ViewController(viewModel: ViewModel(coordinator: self)), animated: true)
+        goToScreen(screen: .Home)
     }
     
     func goToScreen(screen: Screen) {
-        navCon.pushViewController(IMCViewController(viewModel: IMCViewModel(coordinator: self)), animated: true)
+        switch screen {
+        case .Home:
+            navCon.pushViewController(ViewController(viewModel: ViewModel(coordinator: self)), animated: true)
+        case .IMC:
+            navCon.pushViewController(IMCViewController(viewModel: IMCViewModel(coordinator: self)), animated: true)
+        case .IMCCalc(let data):
+            navCon.pushViewController(CalcViewController(data: data), animated: true)
+        }
+        
     }
     
     func openAlert(title: String) {

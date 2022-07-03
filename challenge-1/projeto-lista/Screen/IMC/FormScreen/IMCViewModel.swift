@@ -8,8 +8,8 @@ public class IMCViewModel {
         self.coordinator = coordinator
     }
     
-    public func didTapButton(imc: Double) {
-        coordinator.goToScreen(screen: .Home)
+    func didTapButton(data: IMCModel) {
+        coordinator.goToScreen(screen: .IMCCalc(data))
     }
     
     public func openAlert(title: String) {

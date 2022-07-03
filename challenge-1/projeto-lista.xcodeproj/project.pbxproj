@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B02381C2871D6710049D307 /* CalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02381A2871D6710049D307 /* CalcViewController.swift */; };
+		8B02381D2871D6710049D307 /* CalcViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B02381B2871D6710049D307 /* CalcViewController.xib */; };
 		8B1407252867200400556B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1407242867200400556B73 /* AppDelegate.swift */; };
 		8B14072F2867200400556B73 /* projeto_lista.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B14072D2867200400556B73 /* projeto_lista.xcdatamodeld */; };
 		8B1407312867200600556B73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1407302867200600556B73 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B02381A2871D6710049D307 /* CalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcViewController.swift; sourceTree = "<group>"; };
+		8B02381B2871D6710049D307 /* CalcViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalcViewController.xib; sourceTree = "<group>"; };
 		8B1407212867200400556B73 /* projeto-lista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "projeto-lista.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1407242867200400556B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B14072E2867200400556B73 /* projeto_lista.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = projeto_lista.xcdatamodel; sourceTree = "<group>"; };
@@ -55,6 +59,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B0238142871D5BB0049D307 /* FormScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8BCA6780287111E000E3CC39 /* IMCViewController.xib */,
+				8BCA6782287111F000E3CC39 /* IMCViewController.swift */,
+				8BCA67842871139900E3CC39 /* IMCViewModel.swift */,
+			);
+			path = FormScreen;
+			sourceTree = "<group>";
+		};
+		8B0238152871D62E0049D307 /* CalcScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8B02381A2871D6710049D307 /* CalcViewController.swift */,
+				8B02381B2871D6710049D307 /* CalcViewController.xib */,
+			);
+			path = CalcScreen;
+			sourceTree = "<group>";
+		};
 		8B1407182867200400556B73 = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +130,8 @@
 		8BCA677F287111CB00E3CC39 /* IMC */ = {
 			isa = PBXGroup;
 			children = (
-				8BCA6780287111E000E3CC39 /* IMCViewController.xib */,
-				8BCA6782287111F000E3CC39 /* IMCViewController.swift */,
-				8BCA67842871139900E3CC39 /* IMCViewModel.swift */,
+				8B0238152871D62E0049D307 /* CalcScreen */,
+				8B0238142871D5BB0049D307 /* FormScreen */,
 				8BCA67862871178000E3CC39 /* IMCModel.swift */,
 			);
 			path = IMC;
@@ -197,6 +219,7 @@
 				8BDD4CC12870EEC800A80BF3 /* TableViewCell.xib in Resources */,
 				8BDD4CC62870FB9900A80BF3 /* ViewController.xib in Resources */,
 				8B1407312867200600556B73 /* Assets.xcassets in Resources */,
+				8B02381D2871D6710049D307 /* CalcViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +233,7 @@
 				8BCA67852871139900E3CC39 /* IMCViewModel.swift in Sources */,
 				8BDD4CC32870FABC00A80BF3 /* ViewController.swift in Sources */,
 				8B1407422867232400556B73 /* MainCoordinator.swift in Sources */,
+				8B02381C2871D6710049D307 /* CalcViewController.swift in Sources */,
 				8BCA6783287111F000E3CC39 /* IMCViewController.swift in Sources */,
 				8B14074628672FCD00556B73 /* Coordinator.swift in Sources */,
 				8B14072F2867200400556B73 /* projeto_lista.xcdatamodeld in Sources */,

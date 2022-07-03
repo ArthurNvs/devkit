@@ -22,21 +22,12 @@ class IMCViewController: UIViewController {
         view.backgroundColor = .black
     }
     
-    func calcIMC() -> Double {
-        guard let height = Double(heightField.text!), height > 0.0, let weight = Double(weightField.text!), weight > 0.0 else { return 0.0 }
-        return weight / (height * height)
-    }
-    
     @IBAction func didTapButton(_ sender: Any) {
-        let imc = calcIMC()
-        
-        if (imc == 0.0) {
+        guard let height = Double(heightField.text!), height > 0.0, let weight = Double(weightField.text!), weight > 0.0 else {
             viewModel?.openAlert(title: "Dados inválidos")
             return
         }
-        
-        viewModel?.openAlert(title: "\(imc)")
-        viewModel?.didTapButton(imc: imc)
+        viewModel?.didTapButton(data: IMCModel(peso: weight, altura: height))
     }
     
 }
