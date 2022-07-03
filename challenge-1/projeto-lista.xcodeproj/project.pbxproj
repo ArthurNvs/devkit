@@ -17,6 +17,7 @@
 		8BCA6781287111E000E3CC39 /* IMCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BCA6780287111E000E3CC39 /* IMCViewController.xib */; };
 		8BCA6783287111F000E3CC39 /* IMCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA6782287111F000E3CC39 /* IMCViewController.swift */; };
 		8BCA67852871139900E3CC39 /* IMCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA67842871139900E3CC39 /* IMCViewModel.swift */; };
+		8BCA67872871178000E3CC39 /* IMCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA67862871178000E3CC39 /* IMCModel.swift */; };
 		8BDD4CC02870EEC800A80BF3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CBE2870EEC800A80BF3 /* TableViewCell.swift */; };
 		8BDD4CC12870EEC800A80BF3 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BDD4CBF2870EEC800A80BF3 /* TableViewCell.xib */; };
 		8BDD4CC32870FABC00A80BF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CC22870FABC00A80BF3 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		8BCA6780287111E000E3CC39 /* IMCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IMCViewController.xib; sourceTree = "<group>"; };
 		8BCA6782287111F000E3CC39 /* IMCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCViewController.swift; sourceTree = "<group>"; };
 		8BCA67842871139900E3CC39 /* IMCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCViewModel.swift; sourceTree = "<group>"; };
+		8BCA67862871178000E3CC39 /* IMCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCModel.swift; sourceTree = "<group>"; };
 		8BDD4CBE2870EEC800A80BF3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8BDD4CBF2870EEC800A80BF3 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		8BDD4CC22870FABC00A80BF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				8BCA6780287111E000E3CC39 /* IMCViewController.xib */,
 				8BCA6782287111F000E3CC39 /* IMCViewController.swift */,
 				8BCA67842871139900E3CC39 /* IMCViewModel.swift */,
+				8BCA67862871178000E3CC39 /* IMCModel.swift */,
 			);
 			path = IMC;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				8B14074628672FCD00556B73 /* Coordinator.swift in Sources */,
 				8B14072F2867200400556B73 /* projeto_lista.xcdatamodeld in Sources */,
 				8BDD4CC02870EEC800A80BF3 /* TableViewCell.swift in Sources */,
+				8BCA67872871178000E3CC39 /* IMCModel.swift in Sources */,
 				8B1407252867200400556B73 /* AppDelegate.swift in Sources */,
 				8BCA677E2871045300E3CC39 /* ViewModel.swift in Sources */,
 			);

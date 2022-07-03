@@ -13,7 +13,7 @@ class MainCoordinator: Coordinator {
     }
     
     func goToScreen(screen: Screen) {
-        navCon.pushViewController(IMCViewController(), animated: true)
+        navCon.pushViewController(IMCViewController(viewModel: IMCViewModel(coordinator: self)), animated: true)
     }
     
     func openAlert(title: String) {
