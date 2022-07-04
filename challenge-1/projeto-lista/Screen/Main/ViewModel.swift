@@ -14,7 +14,7 @@ public class ViewModel: ScreenProtocol {
     }
     
     public func didTapListCell(name: String) {
-        if (name == "Desafio 1") { coordinator.goToScreen(screen: .IMC) }
+        if (name == names[0]) { coordinator.goToScreen(screen: .IMC) }
         return
     }
     

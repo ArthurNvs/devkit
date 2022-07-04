@@ -9,6 +9,10 @@ public class IMCViewModel {
     }
     
     func didTapButton(data: IMCModel) {
+        if(data.altura <= 0 || data.peso <= 0){
+            coordinator.openAlert(title: "Dados inválidos")
+            return
+        }
         coordinator.goToScreen(screen: .IMCCalc(data))
     }
     

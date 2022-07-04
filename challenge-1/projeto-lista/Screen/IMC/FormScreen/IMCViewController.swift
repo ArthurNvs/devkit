@@ -25,11 +25,7 @@ class IMCViewController: UIViewController {
     }
     
     @IBAction func didTapButton(_ sender: Any) {
-        guard let height = Double(heightField.text!), height > 0.0, let weight = Double(weightField.text!), weight > 0.0 else {
-            viewModel?.openAlert(title: "Dados inválidos")
-            return
-        }
-        viewModel?.didTapButton(data: IMCModel(peso: weight, altura: height))
+        viewModel?.didTapButton(data: IMCModel(peso: Double(weightField.text!) ?? 0, altura: Double(heightField.text!) ?? 0))
     }
     
 }

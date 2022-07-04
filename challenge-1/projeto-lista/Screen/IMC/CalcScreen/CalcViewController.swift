@@ -21,22 +21,17 @@ class CalcViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-    
-        imcLabel.text = "Seu IMC é de \(String(format: "%.2f", calcIMC()))"
-        statusLabel.text = setStatusLabel()
+        configLabel()
     }
     
-    func calcIMC() -> Double {
+    func getIMC() -> Double {
         guard let imcData = data, data?.peso != 0.0, data?.altura != 0.0 else { return 0.0 }
-        return imcData.peso / (imcData.altura * imcData.altura)
+        return viewModel?.calcIMC(height: imcData.altura, weight: imcData.peso) ?? 0
     }
     
-    func setStatusLabel() -> String {
-        if calcIMC() >= 18.5 && calcIMC() < 25 { return "Normal 😁" }
-        if calcIMC() >= 25 && calcIMC() < 30 { return "Sobrepeso 🙁" }
-        if calcIMC() >= 30 && calcIMC() < 35 { return "Obesidade classe I ☹️" }
-        if calcIMC() >= 35 { return "Obesidade classe II ☹️" }
-        return "Desnutrição 😵"
+    func configLabel() {
+        imcLabel.text = getIMC() == 0 ? "Erro ao calcular IMC": "Seu IMC é de \(String(format: "%.2f", getIMC()))"
+        statusLabel.text = viewModel?.setLabel(imc: getIMC()) ?? "Erro ao tratar os dados"
     }
 
     @IBAction func didTapCalcButton(_ sender: Any) {
