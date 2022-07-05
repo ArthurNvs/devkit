@@ -1,7 +1,9 @@
 import Foundation
 import UIKit
 
-public class CalcViewModel {
+public class CalcViewModel: ViewModelType {
+    var delegate: ViewModelDelegate?
+    
     var coordinator: MainCoordinator
     
     init(coordinator: MainCoordinator) {
@@ -20,12 +22,15 @@ public class CalcViewModel {
         coordinator.openAlert(title: title)
     }
     
-    func calcIMC(height: Double, weight: Double) -> Double {
-        if (height == 0 || weight == 0) { return 0.0 }
-        return weight / (height * height)
+    func calcIMC(data: IMCModel) {
+        if data.peso == 0.0, data.altura == 0.0 {
+            delegate?.calcFail("Dados inválidos")
+        }
+        let imc = data.peso / (data.altura * data.altura)
+        delegate?.calcSuccess(imc: imc)
     }
     
-    func setLabel(imc: Double) -> String {
+    func getLabelMessage(imc: Double) -> String {
         if imc >= 18.5 && imc < 25 { return "Normal 😁" }
         if imc >= 25 && imc < 30 { return "Sobrepeso 🙁" }
         if imc >= 30 && imc < 35 { return "Obesidade classe I ☹️" }

@@ -4,6 +4,8 @@ class CalcViewController: UIViewController {
     
     var data: IMCModel?
     var viewModel: CalcViewModel?
+    var imc: Double = 0.0
+    var errorMessage: String = ""
     
     @IBOutlet weak var imcLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
@@ -21,17 +23,15 @@ class CalcViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        viewModel?.delegate = self
         configLabel()
     }
     
-    func getIMC() -> Double {
-        guard let imcData = data, data?.peso != 0.0, data?.altura != 0.0 else { return 0.0 }
-        return viewModel?.calcIMC(height: imcData.altura, weight: imcData.peso) ?? 0
-    }
-    
     func configLabel() {
-        imcLabel.text = getIMC() == 0 ? "Erro ao calcular IMC": "Seu IMC é de \(String(format: "%.2f", getIMC()))"
-        statusLabel.text = viewModel?.setLabel(imc: getIMC()) ?? "Erro ao tratar os dados"
+        guard let imcData = data else { return }
+        viewModel?.calcIMC(data: imcData)
+        imcLabel.text = imc == 0 ? "Erro ao calcular IMC": "Seu IMC é de \(String(format: "%.2f", imc))"
+        statusLabel.text = viewModel?.getLabelMessage(imc: self.imc) ?? "Erro ao tratar os dados"
     }
 
     @IBAction func didTapCalcButton(_ sender: Any) {
@@ -41,4 +41,15 @@ class CalcViewController: UIViewController {
     @IBAction func didTapCloseButton(_ sender: Any) {
         viewModel?.didTapButton(close: true)
     }
+}
+
+extension CalcViewController: ViewModelDelegate {
+    func calcSuccess(imc: Double) {
+        self.imc = imc
+    }
+    
+    func calcFail(_ errorMessage: String) {
+        self.errorMessage = errorMessage
+    }
+    
 }

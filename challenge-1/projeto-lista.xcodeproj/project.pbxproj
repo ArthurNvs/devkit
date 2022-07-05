@@ -16,6 +16,7 @@
 		8B1407422867232400556B73 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1407412867232400556B73 /* MainCoordinator.swift */; };
 		8B14074628672FCD00556B73 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14074528672FCD00556B73 /* Coordinator.swift */; };
 		8B65B7362871E185007064C5 /* CalcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B65B7352871E185007064C5 /* CalcViewModel.swift */; };
+		8B65B73928745D99007064C5 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B65B73828745D99007064C5 /* Protocols.swift */; };
 		8BCA677E2871045300E3CC39 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA677D2871045300E3CC39 /* ViewModel.swift */; };
 		8BCA6781287111E000E3CC39 /* IMCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BCA6780287111E000E3CC39 /* IMCViewController.xib */; };
 		8BCA6783287111F000E3CC39 /* IMCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA6782287111F000E3CC39 /* IMCViewController.swift */; };
@@ -39,6 +40,7 @@
 		8B1407412867232400556B73 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		8B14074528672FCD00556B73 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8B65B7352871E185007064C5 /* CalcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcViewModel.swift; sourceTree = "<group>"; };
+		8B65B73828745D99007064C5 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		8BCA677D2871045300E3CC39 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		8BCA6780287111E000E3CC39 /* IMCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IMCViewController.xib; sourceTree = "<group>"; };
 		8BCA6782287111F000E3CC39 /* IMCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				8B1407242867200400556B73 /* AppDelegate.swift */,
 				8B14073E2867224700556B73 /* Coordinator */,
 				8B14073B2867204500556B73 /* Screen */,
+				8B65B73728745D7A007064C5 /* Protocols */,
 				8B1407302867200600556B73 /* Assets.xcassets */,
 				8B1407322867200600556B73 /* LaunchScreen.storyboard */,
 				8B1407352867200600556B73 /* Info.plist */,
@@ -128,6 +131,14 @@
 				8B14074528672FCD00556B73 /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8B65B73728745D7A007064C5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8B65B73828745D99007064C5 /* Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8BCA677F287111CB00E3CC39 /* IMC */ = {
@@ -242,6 +253,7 @@
 				8B14074628672FCD00556B73 /* Coordinator.swift in Sources */,
 				8B14072F2867200400556B73 /* projeto_lista.xcdatamodeld in Sources */,
 				8BDD4CC02870EEC800A80BF3 /* TableViewCell.swift in Sources */,
+				8B65B73928745D99007064C5 /* Protocols.swift in Sources */,
 				8BCA67872871178000E3CC39 /* IMCModel.swift in Sources */,
 				8B1407252867200400556B73 /* AppDelegate.swift in Sources */,
 				8BCA677E2871045300E3CC39 /* ViewModel.swift in Sources */,
