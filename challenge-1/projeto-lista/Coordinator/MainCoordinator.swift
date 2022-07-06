@@ -20,6 +20,8 @@ class MainCoordinator: Coordinator {
             navCon.pushViewController(IMCViewController(viewModel: IMCViewModel(coordinator: self)), animated: true)
         case .IMCCalc(let data):
             navCon.pushViewController(CalcViewController(data: data, viewModel: CalcViewModel(coordinator: self)), animated: true)
+        case .LicensePlates:
+            navCon.pushViewController(LicensePlateViewController(), animated: true)
         }
         
     }

@@ -5,6 +5,7 @@ enum Screen {
     case Home
     case IMC
     case IMCCalc(IMCModel)
+    case LicensePlates
 }
 
 protocol Coordinator {
