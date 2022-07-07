@@ -8,6 +8,17 @@ public class LicensePlateViewModel {
     }
     
     func didTapButton(data: PlateModel) {
-        coordinator.goToScreen(screen: .RestrictionDays(data))
+        if validatePlate(plateId: data.plateId) {
+            coordinator.goToScreen(screen: .RestrictionDays(data))
+        }
+    }
+    
+    func validatePlate(plateId: String) -> Bool {
+        if plateId.isEmpty || plateId.count != 7 || Int(plateId) != nil {
+            coordinator.openAlert(title: "Insira uma numeração válida")
+            return false
+        }
+        
+        return true
     }
 }

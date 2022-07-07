@@ -60,12 +60,19 @@ class LicensePlateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        plateTextField.addTarget(self, action: #selector(checkMaxLength(textField:)), for: .editingChanged)
     }
     
     func setupView() {
         view.backgroundColor = .white
         view.addSubview(stackView)
         setConstraints()
+    }
+    
+    @objc func checkMaxLength(textField: UITextField) {
+        if (textField.text?.count ?? 0 > 7) {
+            textField.deleteBackward()
+        }
     }
     
 }
