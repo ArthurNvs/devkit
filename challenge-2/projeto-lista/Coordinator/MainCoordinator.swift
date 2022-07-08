@@ -22,8 +22,8 @@ class MainCoordinator: Coordinator {
             navCon.pushViewController(CalcViewController(data: data, viewModel: CalcViewModel(coordinator: self)), animated: true)
         case .LicensePlates:
             navCon.pushViewController(LicensePlateViewController(viewModel: LicensePlateViewModel(coordinator: self)), animated: true)
-        case .RestrictionDays:
-            navCon.pushViewController(RestrictionDaysViewController(), animated: true)
+        case .RestrictionDays(let data):
+            navCon.pushViewController(RestrictionDaysViewController(plateData: data), animated: true)
         }
     }
     
