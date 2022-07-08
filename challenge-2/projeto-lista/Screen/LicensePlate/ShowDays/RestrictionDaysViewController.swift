@@ -3,10 +3,12 @@ import UIKit
 
 class RestrictionDaysViewController: UIViewController {
     
+    var viewModel: RestrictionDaysViewModel?
     var plateData: PlateModel
     
-    init(plateData: PlateModel) {
+    init(plateData: PlateModel, viewModel: RestrictionDaysViewModel) {
         self.plateData = plateData
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,7 +31,7 @@ class RestrictionDaysViewController: UIViewController {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = plateData.plateId
+        label.text = viewModel?.getLabel(plateId: plateData.plateId)
         return label
     }()
     
