@@ -60,7 +60,7 @@ class LicensePlateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        plateTextField.addTarget(self, action: #selector(checkMaxLength(textField:)), for: .editingChanged)
+        plateTextField.addTarget(self, action: #selector(setInput(textField:)), for: .editingChanged)
     }
     
     func setupView() {
@@ -69,7 +69,9 @@ class LicensePlateViewController: UIViewController {
         setConstraints()
     }
     
-    @objc func checkMaxLength(textField: UITextField) {
+    @objc func setInput(textField: UITextField) {
+        guard let filteredText = textField.text?.trimmingCharacters(in: .whitespaces) else { return }
+        textField.text? = filteredText
         if (textField.text?.count ?? 0 > 7) {
             textField.deleteBackward()
         }
