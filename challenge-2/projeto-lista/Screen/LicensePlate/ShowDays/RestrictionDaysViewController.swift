@@ -24,11 +24,19 @@ class RestrictionDaysViewController: UIViewController {
         stackView.distribution = .fill
         stackView.spacing = 20
         
-        stackView.addArrangedSubview(label)
+        stackView.addArrangedSubview(plateLabel)
+        stackView.addArrangedSubview(allowedDayLabel)
         return stackView
     }()
     
-    private lazy var label: UILabel = {
+    private lazy var plateLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = plateData.plateId
+        return label
+    }()
+    
+    private lazy var allowedDayLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = viewModel?.getLabel(plateId: plateData.plateId)
@@ -56,8 +64,11 @@ private extension RestrictionDaysViewController {
             self.stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             self.stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             
-            self.label.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 100),
-            self.label.heightAnchor.constraint(equalToConstant: 40)
+            self.plateLabel.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 70),
+            self.plateLabel.heightAnchor.constraint(equalToConstant: 40),
+            
+            self.allowedDayLabel.topAnchor.constraint(equalTo: plateLabel.topAnchor, constant: 100),
+            self.allowedDayLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
 }
