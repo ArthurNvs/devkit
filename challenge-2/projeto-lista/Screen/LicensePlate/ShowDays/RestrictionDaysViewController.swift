@@ -57,8 +57,6 @@ private extension RestrictionDaysViewController {
             self.stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             
             self.label.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 100),
-            self.label.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 150),
-            self.label.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -150),
             self.label.heightAnchor.constraint(equalToConstant: 40)
         ])
     }

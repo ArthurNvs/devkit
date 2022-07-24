@@ -23,7 +23,31 @@ public class RestrictionDaysViewModel {
     
     func getDayValidation(restrictionDay: Int) -> String {
         let today = Calendar.current.component(.weekday, from: Date())
-        return today == restrictionDay ? "Não pode rodar hoje!" : "Pode rodar hoje!"
-    }
-    
+        
+        if (restrictionDay > today) {
+            switch restrictionDay - today {
+            case 1: return "Restrição amanhã!"
+            case 2: return "Restrição em 2 dias!"
+            case 3: return "Restrição em 3 dias!"
+            case 4: return "Restrição em 4 dias!"
+            case 5: return "Restrição em 5 dias!"
+            case 6: return "Restrição em 6 dias!"
+            default: return "Erro ao validar data"
+            }
+        }
+        
+        if (restrictionDay < today) {
+            switch today - restrictionDay {
+            case 1: return "Restrição em 6 dias!"
+            case 2: return "Restrição em 5 dias!"
+            case 3: return "Restrição em 4 dias!"
+            case 4: return "Restrição em 3 dias!"
+            case 5: return "Restrição em 2 dias!"
+            case 6: return "Restrição amanhã!"
+            default: return "Erro ao validar data"
+            }
+        }
+        
+        return "Hoje seu carro está proibido de rodar!"
+    }    
 }
