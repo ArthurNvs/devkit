@@ -33,8 +33,8 @@ public class RestrictionDaysViewModel {
             }
         }
         
-        if (restrictionDay < today) {
-            let difference = restrictionDay - today
+        if (today > restrictionDay) {
+            let difference = today - restrictionDay
             switch difference {
             case 1...5: return "Restrição em \(7 - difference) dias!"
             case 6: return "Restrição amanhã!"
