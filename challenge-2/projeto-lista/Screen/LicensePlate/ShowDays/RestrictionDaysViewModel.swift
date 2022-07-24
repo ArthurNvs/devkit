@@ -25,24 +25,18 @@ public class RestrictionDaysViewModel {
         let today = Calendar.current.component(.weekday, from: Date())
         
         if (restrictionDay > today) {
-            switch restrictionDay - today {
+            let difference = restrictionDay - today
+            switch difference {
             case 1: return "Restrição amanhã!"
-            case 2: return "Restrição em 2 dias!"
-            case 3: return "Restrição em 3 dias!"
-            case 4: return "Restrição em 4 dias!"
-            case 5: return "Restrição em 5 dias!"
-            case 6: return "Restrição em 6 dias!"
+            case 2...6: return "Restrição em \(difference) dias!"
             default: return "Erro ao validar data"
             }
         }
         
         if (restrictionDay < today) {
-            switch today - restrictionDay {
-            case 1: return "Restrição em 6 dias!"
-            case 2: return "Restrição em 5 dias!"
-            case 3: return "Restrição em 4 dias!"
-            case 4: return "Restrição em 3 dias!"
-            case 5: return "Restrição em 2 dias!"
+            let difference = restrictionDay - today
+            switch difference {
+            case 1...5: return "Restrição em \(7 - difference) dias!"
             case 6: return "Restrição amanhã!"
             default: return "Erro ao validar data"
             }
