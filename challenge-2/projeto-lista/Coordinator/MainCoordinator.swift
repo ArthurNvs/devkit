@@ -2,10 +2,10 @@ import Foundation
 import UIKit
 
 class MainCoordinator: Coordinator {
-    var navCon: UINavigationController
+    var navigationController: UINavigationController
     
     public init(navCon: UINavigationController) {
-        self.navCon = navCon
+        self.navigationController = navCon
     }
     
     func start() {
@@ -15,22 +15,22 @@ class MainCoordinator: Coordinator {
     func goToScreen(screen: Screen) {
         switch screen {
         case .Home:
-            navCon.pushViewController(ViewController(viewModel: ViewModel(coordinator: self)), animated: false)
+            navigationController.pushViewController(ViewController(viewModel: ViewModel(coordinator: self)), animated: false)
         case .IMC:
-            navCon.pushViewController(IMCViewController(viewModel: IMCViewModel(coordinator: self)), animated: true)
+            navigationController.pushViewController(IMCViewController(viewModel: IMCViewModel(coordinator: self)), animated: true)
         case .IMCCalc(let data):
-            navCon.pushViewController(CalcViewController(data: data, viewModel: CalcViewModel(coordinator: self)), animated: true)
+            navigationController.pushViewController(CalcViewController(data: data, viewModel: CalcViewModel(coordinator: self)), animated: true)
         case .LicensePlates:
-            navCon.pushViewController(LicensePlateViewController(viewModel: LicensePlateViewModel(coordinator: self)), animated: true)
+            navigationController.pushViewController(LicensePlateViewController(viewModel: LicensePlateViewModel(coordinator: self)), animated: true)
         case .RestrictionDays(let data):
-            navCon.pushViewController(RestrictionDaysViewController(plateData: data, viewModel: RestrictionDaysViewModel(coordinator: self)), animated: true)
+            navigationController.pushViewController(RestrictionDaysViewController(plateData: data, viewModel: RestrictionDaysViewModel(coordinator: self)), animated: true)
         }
     }
     
     func openAlert(title: String) {
         let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        navCon.viewControllers.first?.present(alertController, animated: true, completion: nil)
+        navigationController.viewControllers.first?.present(alertController, animated: true, completion: nil)
     }
     
 }

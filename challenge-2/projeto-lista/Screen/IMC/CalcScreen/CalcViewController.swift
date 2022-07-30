@@ -5,8 +5,6 @@ class CalcViewController: UIViewController {
     var data: IMCModel?
     var viewModel: CalcViewModel?
     var imc: Double = 0.0
-    var errorMessage: String = ""
-    var successMessage: String = ""
     
     @IBOutlet weak var imcLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
@@ -31,8 +29,8 @@ class CalcViewController: UIViewController {
     func configLabel() {
         guard let imcData = data else { return }
         viewModel?.calcIMC(data: imcData)
-        imcLabel.text = imc == 0 ? self.errorMessage: self.successMessage
-        statusLabel.text = viewModel?.getLabelMessage(imc: self.imc) ?? self.errorMessage
+        imcLabel.text = imc == 0 ? viewModel?.errorMessage: viewModel?.successMessage
+        statusLabel.text = viewModel?.getLabelMessage(imc: self.imc) ?? viewModel?.errorMessage
     }
 
     @IBAction func didTapCalcButton(_ sender: Any) {
@@ -47,11 +45,11 @@ class CalcViewController: UIViewController {
 extension CalcViewController: ViewModelDelegate {
     func calcSuccess(imc: Double) {
         self.imc = imc
-        self.successMessage = "Seu IMC é de \(String(format: "%.2f", imc))"
+        viewModel?.successMessage = "Seu IMC é de \(String(format: "%.2f", imc))"
     }
     
     func calcFail(_ errorMessage: String) {
-        self.errorMessage = errorMessage
+        viewModel?.errorMessage = errorMessage
     }
     
 }

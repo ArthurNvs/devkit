@@ -6,6 +6,9 @@ public class CalcViewModel: ViewModelType {
     
     var coordinator: MainCoordinator
     
+    var errorMessage: String = ""
+    var successMessage: String = ""
+    
     init(coordinator: MainCoordinator) {
         self.coordinator = coordinator
     }
