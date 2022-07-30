@@ -22,23 +22,8 @@ public class LicensePlateViewModel {
     }
     
     func isValidPlateType(plateId: String) -> Bool {
-        if (plateId[0].isLetter && plateId[1].isLetter && plateId[2].isLetter) {
-            if (plateId[3].isNumber && plateId[4].isNumber && plateId[5].isNumber && plateId[6].isNumber) {
-                print("placa antiga")
-                return true
-            }
-            if (plateId[3].isNumber && plateId[4].isLetter && plateId[5].isNumber && plateId[6].isNumber) {
-                print("placa nova")
-                return true
-            }
-        }
+        if (plateId.isValidWith(regexType: .validPlate)) { return true }
         return false
     }
     
-}
-
-extension StringProtocol {
-    subscript(offset: Int) -> Character {
-        self[index(startIndex, offsetBy: offset)]
-    }
 }

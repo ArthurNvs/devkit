@@ -22,6 +22,7 @@
 		8B65B73E28762F18007064C5 /* RestrictionDaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B65B73D28762F18007064C5 /* RestrictionDaysViewController.swift */; };
 		8B65B74228762FAB007064C5 /* LicensePlateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B65B74128762FAB007064C5 /* LicensePlateViewModel.swift */; };
 		8B65B744287631A1007064C5 /* PlateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B65B743287631A1007064C5 /* PlateModel.swift */; };
+		8BBBF22428955C2B00B2D68E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF22328955C2B00B2D68E /* Extensions.swift */; };
 		8BCA677E2871045300E3CC39 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA677D2871045300E3CC39 /* ViewModel.swift */; };
 		8BCA6781287111E000E3CC39 /* IMCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BCA6780287111E000E3CC39 /* IMCViewController.xib */; };
 		8BCA6783287111F000E3CC39 /* IMCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA6782287111F000E3CC39 /* IMCViewController.swift */; };
@@ -51,6 +52,7 @@
 		8B65B73D28762F18007064C5 /* RestrictionDaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestrictionDaysViewController.swift; sourceTree = "<group>"; };
 		8B65B74128762FAB007064C5 /* LicensePlateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensePlateViewModel.swift; sourceTree = "<group>"; };
 		8B65B743287631A1007064C5 /* PlateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateModel.swift; sourceTree = "<group>"; };
+		8BBBF22328955C2B00B2D68E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8BCA677D2871045300E3CC39 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		8BCA6780287111E000E3CC39 /* IMCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IMCViewController.xib; sourceTree = "<group>"; };
 		8BCA6782287111F000E3CC39 /* IMCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		8B65B73A28762C8C007064C5 /* LicensePlate */ = {
 			isa = PBXGroup;
 			children = (
+				8BBBF22228955BF400B2D68E /* Utils */,
 				8B65B73F28762F74007064C5 /* Form */,
 				8B65B74028762F8C007064C5 /* ShowDays */,
 				8B65B743287631A1007064C5 /* PlateModel.swift */,
@@ -178,6 +181,14 @@
 				8B2472DF28789E2C004ACE0D /* RestrictionDaysViewModel.swift */,
 			);
 			path = ShowDays;
+			sourceTree = "<group>";
+		};
+		8BBBF22228955BF400B2D68E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8BBBF22328955C2B00B2D68E /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8BCA677F287111CB00E3CC39 /* IMC */ = {
@@ -290,6 +301,7 @@
 				8BCA6783287111F000E3CC39 /* IMCViewController.swift in Sources */,
 				8B65B73E28762F18007064C5 /* RestrictionDaysViewController.swift in Sources */,
 				8B65B7362871E185007064C5 /* CalcViewModel.swift in Sources */,
+				8BBBF22428955C2B00B2D68E /* Extensions.swift in Sources */,
 				8B65B73C28762CF8007064C5 /* LicensePlateViewController.swift in Sources */,
 				8B14074628672FCD00556B73 /* Coordinator.swift in Sources */,
 				8B14072F2867200400556B73 /* projeto_lista.xcdatamodeld in Sources */,
