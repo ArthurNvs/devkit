@@ -1,3 +1,3 @@
 # Devkit
 
-This repository will have tasks from Devkit, an iOS mentorship.
+This repository contains a series of challenges from Devkit, an iOS mentorship.
